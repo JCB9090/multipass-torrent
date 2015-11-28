@@ -86,7 +86,7 @@ module.exports = function(stream, source) {
 
     function parsesource(s) {
 
-        var eztvEndpoints = ['eztvapi.re', 'tv.ytspt.re', 'api.popcorntime.io', 'api.popcorntime.cc', 'http://7aa7xwqtxoft27r2.onion'];
+        var eztvEndpoints = ['eztvapi.re', 'tv.ytspt.re', 'http://7aa7xwqtxoft27r2.onion'];
         var ytsEndpoints = ['yts.ag', 'yts.to', 'yts.io', 'yts.sh', 'http://gm6gttbnl3bjulil.onion'];
 
         if (new RegExp(eztvEndpoints.join('|')).test(s.host)) {
