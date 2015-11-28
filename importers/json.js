@@ -23,9 +23,9 @@ module.exports = function(stream, source) {
             case 'eztv':
                 processEztv(host);
                 break;
-            case 'yts':
-                log.error('json detected yts; please use https://yts.to/tz_daily.txt.gz instead', source);
-                break;
+            //case 'yts':
+            //    log.error('json detected yts; please use https://yts.to/tz_daily.txt.gz instead', source);
+            //    break;
         }
     }
 
@@ -87,7 +87,7 @@ module.exports = function(stream, source) {
     function parsesource(s) {
 
         var eztvEndpoints = ['eztvapi.re', 'tv.ytspt.re', 'api.popcorntime.io', 'api.popcorntime.cc', 'http://7aa7xwqtxoft27r2.onion'];
-        var ytsEndpoints = ['yts.to', 'yts.io', 'yts.sh', 'http://gm6gttbnl3bjulil.onion'];
+        var ytsEndpoints = ['yts.ag', 'yts.to', 'yts.io', 'yts.sh', 'http://gm6gttbnl3bjulil.onion'];
 
         if (new RegExp(eztvEndpoints.join('|')).test(s.host)) {
             s.parsedName = 'eztv';
